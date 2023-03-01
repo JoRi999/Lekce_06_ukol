@@ -1,7 +1,5 @@
 // DÚ č. 1 Parsování data
 
-/*
-
 let parseDate = (date) => {
     date = prompt("zadejte datum ve formátu DD.MM.YYYY")
     let day = Number(date.slice(0,2))
@@ -14,13 +12,8 @@ let parseDate = (date) => {
 
 parseDate()
 
-*/
 
-
-
-/*
-
-DÚ č. 2 Formátování data
+// DÚ č. 2 Formátování data
 
 let date = {
     day: Number(prompt("Zadejte den ve formátu D:")),
@@ -54,9 +47,8 @@ function newDateFormat () {
 
 newDateFormat()
 
-*/
 
-/* DÚ č. 3 Python zaokrouhlování
+// DÚ č. 3 Python zaokrouhlování
 
 let cislo = (prompt("Zadejte desetinné číslo:"))
 
@@ -97,5 +89,3 @@ function round () {
 }
 
 round()
-
-*/ 
