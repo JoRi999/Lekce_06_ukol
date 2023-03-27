@@ -1,26 +1,27 @@
-// DÚ č. 1 Parsování data
-
 /*
 
+// DÚ č. 1 Parsování data
+
+
 let parseDate = (date) => {
-    date = prompt("zadejte datum ve formátu DD.MM.YYYY")
-    let day = Number(date.slice(0,2))
+    return {
+        day: Number(date.slice(0,2)),
 
-    let month = Number(date.slice(3,5))
-    let year = date.slice(6,10)
-
-    console.log("Day: " + day + ", " + "month: " + month + ", " + "year: " + year)
+        month: Number(date.slice(3,5)),
+        year: Number(date.slice(6,10)),
+    }
 }
 
-parseDate()
+parseDate("12.06.1991")
 
 */
 
+/* 2. příklad = podobný případ jako první úkol, funkci bys měla volat s objektem. Destrukturalizace bude ve funkci a není třeba definovat date, s tím už budeš volat funkci a pak ten objekt ve funkci rozložíš :-)
 
+*/
 
 /*
-
-DÚ č. 2 Formátování data
+// DÚ č. 2 Formátování data
 
 let date = {
     day: Number(prompt("Zadejte den ve formátu D:")),
@@ -55,6 +56,7 @@ function newDateFormat () {
 newDateFormat()
 
 */
+
 
 /* DÚ č. 3 Python zaokrouhlování
 
