@@ -14,27 +14,21 @@ let parseDate = (date) => {
 }
 
 parseDate("12.06.1991")
+*/
 
 
 
+//
 
-/*
+// DÚ č. 2 Formátování data
 
-DÚ č. 2 Formátování data
-
-let date = {
-    day: Number(prompt("Zadejte den ve formátu D:")),
-    month: Number(prompt("Zadejte měsíc ve formátu M")),
-    year: prompt("Zadejte rok:"),
-}
-
-let{day, month, year} = date
-
-function newDateFormat () {
+function newDateFormat (date) {
     let dayNewFormat
     let monthNewFormat
 
-    if (day < 10){
+    let  {day, month, year} = date
+
+    if (day < 10) {
         let dayString = day.toString()
         dayNewFormat = dayString.padStart(2, "0")
     } else {
@@ -42,58 +36,58 @@ function newDateFormat () {
         day = day.toString()
     }
 
-    if (month < 10){
+    if (month < 10) {
         let monthString = month.toString()
         monthNewFormat = monthString.padStart(2, "0")
     } else {
-            monthNewFormat = month
-            month = month.toString()
+        monthNewFormat = month
+        month = month.toString()
     }
-    console.log(dayNewFormat + "." + monthNewFormat + "." + year)
+    return (dayNewFormat + "." + monthNewFormat + "." + year)
 }
 
-newDateFormat()
+let date = newDateFormat({ day: 9, month: 3, year: 2015 })
+console.log(date)
 
-*/
 
 // DÚ č. 3 Python zaokrouhlování
+/*
+function round (cislo) {
+    let celaCast = Math.trunc(cislo)
+    let desetinnaCast = cislo - celaCast
+    let vysledek = 0
 
-let cislo = (prompt("Zadejte desetinné číslo:"))
+    console.log(celaCast, desetinnaCast)
 
-function round () {
-    let desetinnaCast = cislo - Math.trunc(cislo)
-    
-    if (cislo > 0){
+    if (cislo > 0) {
         if (desetinnaCast < 0.50){
-            console.log("Zaokrouhlené číslo: " + Math.trunc(cislo))
-
-        } else if(desetinnaCast > 0.50) {
-            Math.round(cislo)
-            console.log("Zaokrouhlené číslo: " + Math.round(cislo))
+            vysledek = celaCast
+        } else if (desetinnaCast > 0.50) {
+            vysledek = celaCast + 1
         } else {
-            if (Math.trunc(cislo)% 2 == 0){
-                console.log("Zaokrouhlené číslo: " + Math.trunc(cislo))
+            if (celaCast % 2 == 0) {
+                vysledek = celaCast
             } else {
-                console.log("Zaokrouhlené číslo: " + Math.round(cislo))
+                vysledek = celaCast + 1
             }
         }
-    } else{
-        let desetinnaCastZapor = cislo + Math.trunc(cislo)
-        if (desetinnaCastZapor < -0.50){
-            console.log("Zaokrouhlené číslo: " + Math.trunc(cislo))
-
-        } else if(desetinnaCastZapor > -0.50) {
-            Math.round(cislo)
-            console.log("Zaokrouhlené číslo: " + Math.round(cislo))
+    } else {
+        if ((-desetinnaCast) < 0.50) {
+            vysledek = celaCast
+        } else if ((-desetinnaCast) > 0.50) {
+            vysledek = celaCast - 1
         } else {
-            if (Math.trunc(cislo)% 2 == 0){
-                console.log("Zaokrouhlené číslo: " + Math.trunc(cislo))
+            if (celaCast % 2 == 0) {
+                vysledek = celaCast
             } else {
-                console.log("Zaokrouhlené číslo: " + (Math.round(cislo) + (-1)))
+                vysledek = celaCast - 1
             }
         }
     }
-
+    return vysledek   
 }
 
-round()
+let cislo = (prompt("Zadejte desetinné číslo:"))
+vysledek = round(cislo)
+console.log("Zaokrouhlené číslo: " + vysledek)
+*/
